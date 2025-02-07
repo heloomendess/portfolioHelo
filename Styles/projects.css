@@ -1,0 +1,233 @@
+:root {
+    --font-pequena: 'Poppins', sans-serif;
+    --color-gray1: #3d4143;
+    --color-white: #f6f6f6;
+    --color-destaque1: #FFD61E;
+}
+
+.div-princ {
+    width: 100%;
+}
+
+.projects {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 2rem;
+}
+
+.headline {
+    width: 100%;
+    padding: 1.5rem 0rem 1.5rem 0rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.headline a {
+    color: #fff;
+}
+
+.headline a:hover {
+    color: #dbdbdb;
+}
+
+.headline h1 {
+    font-size: 2rem;
+    color: var(--color-destaque1);
+}
+
+.container-projects {
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.content-projects {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Container dos cards */
+.cards-projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    justify-content: center;
+}
+
+/* Card individual */
+.card-project {
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
+    height: 100%;
+}
+
+.card-project:hover {
+    transform: translateY(-5px);
+}
+
+/* Imagem do projeto */
+.img-project {
+    background-color: var(--white);
+    border-radius: 25px;
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.img-project img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+    filter: drop-shadow(2px 2px 20px #AF44F2);
+}
+
+/* Conteúdo do card */
+.content-card {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 1;
+}
+
+/* Texto do projeto */
+.text-project {
+    color: #fff;
+    width: 100%;
+    text-align: left;
+}
+
+.text-project h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 1rem 0 0.5rem;
+}
+
+.text-project span {
+    font-size: 1rem;
+    color: var(--blue);
+    font-weight: 300;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.text-project p {
+    font-size: 1rem;
+    font-weight: normal;
+    color: var(--gray);
+    margin-bottom: 1rem;
+}
+
+
+.btn-project a {
+    display: block;
+    text-align: center;
+    padding: 0.7rem;
+    background-color: var(--color-destaque1);
+    color: var(--color-white);
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+    animation: puls 2s infinite;
+}
+
+.btn-project a:hover {
+    background-color: transparent;
+    border: 1px solid var(--color-destaque1);
+}
+
+@keyframes puls {
+    0% {
+        transform: scale(1);
+
+    }
+
+    50% {
+        transform: scale(1.02);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.tecn {
+    display: flex;
+    gap: 0.5em;
+    text-align: center;
+    flex-wrap: wrap;
+}
+
+.tecn p {
+    border: 1px solid;
+    text-align: center;
+    font-size: 16px;
+    padding: 5px;
+    border-radius: 10px;
+    color: var(--color-white);
+}
+
+.text-project span {
+    color: var(--color-destaque1);
+    font-weight: 700;
+}
+
+.button-projects {
+    margin-top: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.button-projects a {
+    color: var(--color-white);
+    background-color: var(--color-destaque1);
+    padding: 1em;
+    border-radius: 10px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.button-projects a:hover {
+    background-color: transparent;
+    border: 1px solid var(--color-destaque1);
+    color: var(--color-destaque1);
+    font-weight: 700;
+}
+
+
+@media (width <=500px) {
+    .tecn p {
+        font-size: 11px;
+        color: #fff;
+    }
+
+    .text-project p {
+        font-size: 13px;
+    }
+
+    .text-project h2 {
+        font-size: 1.5em;
+        font-weight: 700;
+    }
+    .button-projects a {
+        font-size: 13px;
+    }
+}
